@@ -1,18 +1,36 @@
 easy-amdtest [![Build Status](https://travis-ci.org/easy-js/easy-amdtest.png)](https://travis-ci.org/easy-js/easy-amdtest)
 ============
 
-Class for quickly and easily testing AMD modules. The goal if this library is to abstract much of the boiler necessary to test both locally ,in a headless browser, and in the cloud, with a 3rd party service.
+The purpose of this library is to streamline the process of testing, locally and in the cloud, by abstracting away the majority of the required boiler code.
 
-#### Current Support
-
-**Frameworks:**
+**Supported Frameworks:**
 
 * Mocha
 
-**Platforms:**
+**Supported Platforms:**
 
 * SauceLabs
 
+---
+
+## Example
+
+```
+<script src="../bower_components/requirejs/require.js"></script>
+<script src="../dist/easy-amdtest.js"></script>
+<script>
+  var testSuite = new EasyAMDTest({
+    urlArgs: "bust=" + (new Date()).getTime(),
+    paths: {
+      'proclaim' : '/node_modules/proclaim/lib/proclaim',
+      'mocha'    : '/node_modules/mocha/mocha'
+    }
+  }).run({
+    name: 'mocha',
+    tests: ['./easy-amdtest-mocha.js']
+  });
+</script>
+```
 
 ---
 
@@ -26,12 +44,9 @@ $ npm install easy-amdtest`
 bower install easy-amdtest
 ```
 
-
 ---
 
 ## API
-
-**Note:** EasyAMDTest is exposed to the window object and can be access globally.
 
 ### EasyAMDTest(configuration)
 
@@ -58,7 +73,7 @@ var tests = new EasyAMDTest({
 
 ### EasyAMDTest.run(options)
 
-Run your test suite. See [frameworks](#frameworks) for more information regarding what options may be passed.
+Run your test suite.
 
 ##### PARAMETERS:
 
@@ -81,12 +96,12 @@ new EasyAMDTest(requireConfig).run({
 
 ## Frameworks
 
-#### Mocha
+### Mocha
 **name**: `mocha`
 
-**opts**:
+#### Options
 
-  * **style**: String -- `bdd` or `tdd` 
+**style**: String -- `bdd` or `tdd` 
   
 
 ---

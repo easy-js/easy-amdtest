@@ -28,7 +28,7 @@
     "proclaim": "~2.0.0",
     "amdclean": "~1.3.0",
     "grunt": "~0.4.3",
-    "mocha": "~1.17.1",
+    "mocha": "~1.17.1"
   },
   "license": "MIT"
 }
