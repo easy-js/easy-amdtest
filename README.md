@@ -97,7 +97,10 @@ new EasyAMDTest(requireConfig).run({
 ## Frameworks
 
 ### Mocha
-**name**: `mocha`
+
+#### Name
+
+`mocha`
 
 #### Options
 
