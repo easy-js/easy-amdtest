@@ -233,7 +233,7 @@ var easyAmdtest = function (frameworks) {
       require([
         'require',
         opts.name
-      ].concat(opts.dependecnies), function (require) {
+      ].concat(opts.dependencies), function (require) {
         // Setup test framework if needed
         if (self.test.setup) {
           self.test.setup();

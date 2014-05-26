@@ -76,7 +76,7 @@ EasyAMDTest.prototype.run = function (opts) {
 
   // Load dependencies & perform tests
   // amdclean-ignore
-  require(['require', opts.name].concat(opts.dependecnies), function (require) {
+  require(['require', opts.name].concat(opts.dependencies), function (require) {
     // Setup test framework if needed
     if (self.test.setup) { self.test.setup(); }
 
