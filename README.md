@@ -37,7 +37,7 @@ The purpose of this library is to streamline the process of testing, locally and
 ## Install
 
 ```
-$ npm install easy-amdtest`
+$ npm install easy-amdtest
 ```
 
 ```
@@ -123,7 +123,7 @@ npm install
 bower install
 ```
 
-**Run/View**
+**Execute Tests**
 
 ```
 grunt test-local

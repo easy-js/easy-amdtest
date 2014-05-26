@@ -63,7 +63,7 @@ grunt.initConfig({
             prefixMode: 'camelCase',
             escodegen: {
               format: {
-                indent: { style: '  ' }
+                indent: { style: '  ', adjustMultilineComment: true }
               }
             }
           });
@@ -80,8 +80,7 @@ grunt.initConfig({
       src: 'dist/easy-amdtest.js',
       template: 'build/wrap.hbs',
       objectToExport: 'easyAmdtest',
-      globalAlias: 'EasyAMDTest',
-      indent: '  '
+      globalAlias: 'EasyAMDTest'
     }
   },
 
