@@ -1,7 +1,4 @@
 {
   "name": "easy-amdtest",
-  "version": "0.0.3",
-  "devDependencies": {
-  	"requirejs": "~2.1.11"
-  }
+  "version": "0.0.3"
 }

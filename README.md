@@ -1,4 +1,4 @@
-easy-amdtest [![Build Status](https://travis-ci.org/easy-js/easy-amdtest.png)](https://travis-ci.org/easy-js/easy-amdtest)
+easy-amdtest [![Build Status](https://travis-ci.org/easy-js/easy-amdtest.svg)](https://travis-ci.org/easy-js/easy-amdtest) [![Dependency Status](https://david-dm.org/easy-js/easy-amdtest.svg)](https://david-dm.org/easy-js/easy-amdtest) [![devDependency Status](https://david-dm.org/easy-js/easy-amdtest/dev-status.svg)](https://david-dm.org/easy-js/easy-amdtest#info=devDependencies)
 ============
 
 The purpose of this library is to streamline the process of testing, locally and in the cloud, by abstracting away the majority of the required boiler code.
@@ -80,6 +80,7 @@ Run your test suite.
 * **\*options**: Object
   * **\*name**: String - Name of the test [framework](#frameworks) to use.
   * **\*opts**: Object - Options for the given [framework](#frameworks).
+  * **dependencies: Array - List of dependencies required for tests.
 
 ##### EXAMPLE USAGE:
 
@@ -117,10 +118,6 @@ new EasyAMDTest(requireConfig).run({
 
 ```
 npm install
-```
-
-```
-bower install
 ```
 
 **Execute Tests**
