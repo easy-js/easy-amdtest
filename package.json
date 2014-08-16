@@ -2,7 +2,7 @@
   "name": "easy-amdtest",
   "description": "Class for quickly and easily testing AMD modules.",
   "author": "Jarid Margolin <jarid@firstopinion.co>",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "homepage": "https://github.com/easy-js/easy-amdtest",
   "repository": {
     "type": "git",

@@ -128,9 +128,13 @@ grunt.initConfig({
 });
 
 // Tasks    
-grunt.registerTask('default', ['jshint', 'clean', 'requirejs', 'umd', 'uglify']);
-grunt.registerTask('test-local', ['default', 'mocha_phantomjs']);
-grunt.registerTask('test', ['default', 'connect', 'saucelabs-mocha']);
+grunt.registerTask('default', ['build', 'test']);
+grunt.registerTask('build', ['jshint', 'clean', 'requirejs', 'umd', 'uglify']);
+
+// Test
+grunt.registerTask('test', ['test:local']);
+grunt.registerTask('test:local', ['build', 'mocha_phantomjs']);
+grunt.registerTask('test:cloud', ['build', 'connect', 'saucelabs-mocha']);
 
 
 };

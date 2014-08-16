@@ -43,7 +43,7 @@ var EasyAMDTest = function (configuration) {
 
   // Rewrite require paths so that they solve
   // correctly when run locally
-  this._configure(this._getBaseDir());
+  require.config(this.configuration);
 };
 
 /**
@@ -86,41 +86,6 @@ EasyAMDTest.prototype.run = function (opts) {
       new self.framework.Reporter(self.test.run());
     });
   });
-};
-
-/**
- * Retrieve the baseDir by remove to levels from the window.location. We are
- * able to do this, because we are aware that the tests can be found at
- * test/_runner.html
- *
- * @private
- *
- * @returns {String} baseDir - The baseDir which all paths will be resolved
- * relative to.
- */
-EasyAMDTest.prototype._getBaseDir = function () {
-  var curURL  = window.location.href.toString(),
-      curDir  = curURL.slice(0, curURL.lastIndexOf('/'));
-  
-  return curDir.slice(0, curDir.lastIndexOf('/'));
-};
-
-/**
- * Prepend baseDir to all paths. Necessary to correctly resolve paths when
- * run locally.
- *
- * @private
- *
- * @param {String} baseDir - The baseDir which all paths will be resolved
- * relative to.
- */
-EasyAMDTest.prototype._configure = function (baseDir) {
-  var paths = this.configuration.paths;
-  for (var key in paths) {
-    paths[key] = baseDir + paths[key];
-  }
-
-  require.config(this.configuration);
 };
 
 
