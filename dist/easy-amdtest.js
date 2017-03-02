@@ -238,6 +238,9 @@ easyAmdtest = function (frameworks) {
       'require',
       opts.name
     ].concat(opts.dependencies), function (require) {
+      if (typeof initMochaPhantomJS === 'function') {
+        initMochaPhantomJS();
+      }
       // Setup test framework if needed
       if (self.test.setup) {
         self.test.setup();
